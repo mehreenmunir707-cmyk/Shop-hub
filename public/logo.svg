@@ -1,0 +1,24 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- Inner decorative circle -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.5"/>
+  
+  <!-- MM Text -->
+  <text x="100" y="110" font-family="'Brush Script MT', cursive, serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#d4af37">MM</text>
+  
+  <!-- Decorative elements - left -->
+  <path d="M 40 100 Q 50 90 60 95" stroke="#d4af37" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="45" cy="85" r="3" fill="#d4af37"/>
+  
+  <!-- Decorative elements - right -->
+  <path d="M 160 100 Q 150 90 140 95" stroke="#d4af37" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="155" cy="85" r="3" fill="#d4af37"/>
+  
+  <!-- Bottom decorative line -->
+  <line x1="70" y1="145" x2="130" y2="145" stroke="#d4af37" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- COSMETICS text below -->
+  <text x="100" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1a1a1a" letter-spacing="2">COSMETICS</text>
+</svg>

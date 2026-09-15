@@ -1,0 +1,1025 @@
+/* =========================================
+   HEADER
+========================================= */
+
+.header-container {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 100;
+}
+
+
+/* =========================================
+   TOP SHIPPING BANNER
+========================================= */
+
+.navbar-top-banner {
+  width: 100%;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6a800;
+  color: #111111;
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   MAIN NAVBAR
+========================================= */
+
+.navbar-main {
+  width: 100%;
+  min-height: 86px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 48px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo-container {
+  width: 150px;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.navbar-logo-image {
+  width: 145px;
+  height: 78px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar-nav-links {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navbar-nav-links li {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================
+   NAVBAR LINKS
+========================================= */
+
+.navbar-nav-link,
+.collection-menu-button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  font-family: inherit;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+/* =========================================
+   NAVBAR HOVER
+   ONLY TEXT BECOMES ORANGE
+========================================= */
+
+.navbar-nav-link:hover,
+.collection-menu-button:hover {
+  background: transparent;
+  color: #f5a000;
+}
+
+
+/* Remove underline */
+
+.navbar-nav-link::after,
+.collection-menu-button::after {
+  display: none;
+}
+
+
+/* =========================================
+   COLLECTION DROPDOWN
+========================================= */
+
+.collection-menu {
+  position: relative;
+}
+
+.collection-dropdown {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 260px;
+
+  max-height: 500px;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+
+  padding: 8px 0;
+
+  z-index: 500;
+}
+
+
+/* Dropdown arrow */
+
+.collection-dropdown::before {
+  content: "";
+
+  position: absolute;
+
+  top: -6px;
+  left: 50%;
+
+  width: 11px;
+  height: 11px;
+
+  background: #ffffff;
+
+  border-left: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+/* Dropdown item */
+
+.collection-dropdown-item {
+  display: block;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 18px;
+
+  color: #222222;
+
+  background: #ffffff;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Dropdown hover */
+
+.collection-dropdown-item:hover {
+  background: #ffffff;
+  color: #f5a000;
+}
+
+
+/* =========================================
+   NAVBAR ICONS
+========================================= */
+
+.navbar-icons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   SEARCH / ACCOUNT / CART
+========================================= */
+
+.navbar-icon-btn {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+/* =========================================
+   ICON HOVER
+   SEARCH + LOGIN + CART
+========================================= */
+
+.navbar-icon-btn:hover {
+  color: #f5a000;
+}
+
+
+/* =========================================
+   CART BADGE
+========================================= */
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+
+  top: -8px;
+  right: -9px;
+
+  min-width: 17px;
+  height: 17px;
+
+  padding: 0 4px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+/* =========================================
+   WISHLIST NAVBAR ICON
+========================================= */
+
+.wishlist-navbar-icon {
+  position: relative;
+}
+
+/* =========================================
+   WISHLIST BADGE
+========================================= */
+
+.wishlist-badge {
+  position: absolute;
+
+  top: -8px;
+  right: -9px;
+
+  min-width: 17px;
+  height: 17px;
+
+  padding: 0 4px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wishlist hover */
+.wishlist-navbar-icon:hover {
+  color: #f5a000;
+}
+
+/* =========================================
+   SEARCH OVERLAY
+========================================= */
+
+.search-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 9999;
+}
+
+
+/* =========================================
+   DARK BACKGROUND
+========================================= */
+
+.search-overlay-background {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.68);
+}
+
+
+/* =========================================
+   SEARCH DRAWER
+========================================= */
+
+.search-drawer {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 430px;
+
+  height: 100vh;
+
+  background: #ffffff;
+
+  z-index: 2;
+
+  overflow-y: auto;
+
+  box-shadow:
+    -5px 0 25px rgba(0, 0, 0, 0.08);
+
+  animation:
+    searchDrawerOpen
+    0.25s
+    ease-out;
+}
+
+
+@keyframes searchDrawerOpen {
+
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================
+   SEARCH DRAWER HEADER
+========================================= */
+
+.search-drawer-header {
+  width: 100%;
+
+  height: 84px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 22px 0 25px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+.search-drawer-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   SEARCH CLOSE BUTTON
+========================================= */
+
+.search-close-btn {
+  width: 35px;
+  height: 35px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #222222;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+
+.search-close-btn:hover {
+  color: #f5a000;
+}
+
+
+/* =========================================
+   SEARCH DRAWER CONTENT
+========================================= */
+
+.search-drawer-content {
+  padding: 38px 25px 35px;
+}
+
+
+/* =========================================
+   CATEGORY BOX
+========================================= */
+
+.search-category-box {
+  width: 100%;
+
+  height: 51px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 28px;
+
+  padding: 0 19px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease;
+}
+
+
+.search-category-box:hover {
+  border-color: #aaaaaa;
+}
+
+
+.search-chevron {
+  font-size: 22px;
+
+  line-height: 1;
+
+  color: #999999;
+}
+
+
+/* =========================================
+   SEARCH INPUT
+========================================= */
+
+.search-input-box {
+  width: 100%;
+
+  height: 51px;
+
+  box-sizing: border-box;
+
+  margin-top: 25px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 18px 0 25px;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  transition:
+    border-color 0.2s ease;
+}
+
+
+.search-input-box:focus-within {
+  border-color: #999999;
+}
+
+
+.search-input-box input {
+  flex: 1;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  color: #222222;
+}
+
+
+.search-input-box input::placeholder {
+  color: #888888;
+}
+
+
+.search-input-box svg {
+  flex-shrink: 0;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   SEARCH RESULTS
+========================================= */
+
+.search-results {
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   SEARCH RESULT ITEM
+========================================= */
+
+.search-result-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 12px 5px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease;
+}
+
+
+.search-result-item:hover {
+  background: #fafafa;
+}
+
+
+/* =========================================
+   SEARCH RESULT IMAGE
+========================================= */
+
+.search-result-image {
+  width: 65px;
+  height: 65px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #f5f5f5;
+}
+
+
+.search-result-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.search-result-image span {
+  font-size: 10px;
+
+  color: #888888;
+}
+
+
+/* =========================================
+   SEARCH RESULT INFO
+========================================= */
+
+.search-result-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.search-result-info h3 {
+  margin: 0 0 6px;
+
+  color: #111111;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+.search-result-info p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   SEARCH MESSAGE
+========================================= */
+
+.search-message {
+  margin: 0;
+
+  padding: 25px 0;
+
+  text-align: center;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar-main {
+    padding: 0 25px;
+  }
+
+
+  .navbar-nav-links {
+    gap: 22px;
+  }
+
+
+  .navbar-nav-link,
+  .collection-menu-button {
+    font-size: 15px;
+  }
+
+
+  .navbar-logo-container {
+    width: 120px;
+  }
+
+
+  .navbar-logo-image {
+    width: 115px;
+  }
+
+
+  .navbar-icons {
+    gap: 14px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-top-banner {
+    height: 43px;
+
+    padding: 0 10px;
+
+    font-size: 13px;
+
+    text-align: center;
+  }
+
+
+  .navbar-main {
+    min-height: 72px;
+
+    padding: 0 16px;
+  }
+
+
+  .navbar-logo-container {
+    width: 100px;
+  }
+
+
+  .navbar-logo-image {
+    width: 95px;
+
+    height: 62px;
+  }
+
+
+  .navbar-nav-links {
+    gap: 10px;
+  }
+
+
+  /* Hide selected links */
+
+  .navbar-nav-links li:nth-child(1),
+  .navbar-nav-links li:nth-child(2),
+  .navbar-nav-links li:nth-child(4) {
+    display: none;
+  }
+
+
+  .navbar-nav-link,
+  .collection-menu-button {
+    height: 35px;
+
+    padding: 0 5px;
+
+    font-size: 13px;
+  }
+
+
+  .navbar-icons {
+    gap: 11px;
+  }
+
+
+  .navbar-icon-btn {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  .navbar-icon-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  /* Search Drawer */
+
+  .search-drawer {
+    width: 100%;
+  }
+
+
+  .search-drawer-header {
+    height: 75px;
+
+    padding: 0 18px;
+  }
+
+
+  .search-drawer-header h2 {
+    font-size: 18px;
+  }
+
+
+  .search-drawer-content {
+    padding: 30px 18px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .navbar-nav-links {
+    display: none;
+  }
+
+
+  .navbar-main {
+    justify-content: space-between;
+  }
+
+
+  .navbar-logo-container {
+    width: 95px;
+  }
+
+
+  .navbar-logo-image {
+    width: 90px;
+  }
+
+
+  .navbar-icons {
+    gap: 14px;
+  }
+
+
+  .search-drawer-content {
+    padding: 28px 16px;
+  }
+
+}
+/* ==========================================
+   ACCOUNT DROPDOWN
+========================================== */
+
+.navbar-account-wrapper {
+  position: relative;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  width: 250px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 10px 0;
+  z-index: 2000;
+}
+
+.account-user-info {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.account-user-info strong {
+  font-size: 15px;
+  color: #111111;
+}
+
+.account-user-info span {
+  font-size: 12px;
+  color: #777777;
+  word-break: break-word;
+}
+
+.account-dropdown-item,
+.account-logout-button {
+  display: block;
+  width: 100%;
+  padding: 12px 18px;
+  text-align: left;
+  border: none;
+  background: #ffffff;
+  color: #111111;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.account-dropdown-item:hover,
+.account-logout-button:hover {
+  background: #ffffff;
+  color: #f5a000;
+}

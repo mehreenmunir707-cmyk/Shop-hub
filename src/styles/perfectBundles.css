@@ -1,0 +1,610 @@
+/* =====================================
+   PERFECT BUNDLES SECTION
+===================================== */
+
+.perfect-bundles {
+  width: 100%;
+
+  background: #faf8f4;
+
+  box-sizing: border-box;
+
+  padding: 55px 6.5% 35px;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   HEADING
+===================================== */
+
+.bundles-header {
+  width: 100%;
+
+  margin-bottom: 58px;
+}
+
+.bundles-header h2 {
+  margin: 0;
+
+  color: #050505;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.bundles-header h2 em {
+  font-style: italic;
+
+  font-weight: 700;
+}
+
+
+/* =====================================
+   SLIDER AREA
+===================================== */
+
+.bundles-slider-area {
+  width: 100%;
+
+  position: relative;
+
+  padding: 0 55px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================
+   SWIPER
+===================================== */
+
+.perfect-bundles-swiper {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   SWIPER SLIDE
+===================================== */
+
+.perfect-bundles-swiper
+.swiper-slide {
+  height: auto;
+
+  display: flex;
+}
+
+
+/* =====================================
+   BUNDLE CARD
+===================================== */
+
+.bundle-card {
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================
+   IMAGE
+===================================== */
+
+.bundle-image-box {
+  width: 100%;
+
+  aspect-ratio: 1 / 0.94;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #eeeeee;
+
+  margin-bottom: 22px;
+}
+
+.bundle-image-box img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.bundle-card:hover
+.bundle-image-box img {
+  transform: scale(1.04);
+}
+
+
+/* =====================================
+   PRODUCT NAME
+===================================== */
+
+.bundle-card h3 {
+  margin: 0;
+
+  min-height: 43px;
+
+  color: #111111;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+/* =====================================
+   ORANGE LINE
+===================================== */
+
+.bundle-orange-line {
+  width: 100%;
+
+  height: 1px;
+
+  background: #f5a000;
+
+  margin: 22px 0 19px;
+}
+
+
+/* =====================================
+   PRICE
+===================================== */
+
+.bundle-price {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 22px;
+}
+
+.bundle-price strong {
+  color: #111111;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+
+.bundle-price del {
+  color: #333333;
+
+  font-size: 15px;
+}
+
+
+/* =====================================
+   ADD TO CART
+===================================== */
+
+.bundle-cart-btn {
+  width: 100%;
+
+  height: 46px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ffa500;
+
+  color: #000000;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.3s ease;
+}
+
+.bundle-cart-btn:hover {
+  background: #000000;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================
+   LEFT / RIGHT ARROWS
+===================================== */
+
+.bundle-prev,
+.bundle-next {
+  position: absolute;
+
+  top: 39%;
+
+  z-index: 20;
+
+  width: 50px;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #858585;
+
+  color: #ffffff;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    all 0.3s ease;
+}
+
+
+/* =====================================
+   LEFT ARROW
+===================================== */
+
+.bundle-prev {
+  left: 0;
+}
+
+
+/* =====================================
+   RIGHT ARROW
+===================================== */
+
+.bundle-next {
+  right: 0;
+}
+
+
+/* =====================================
+   ARROW HOVER
+===================================== */
+
+.bundle-prev:hover,
+.bundle-next:hover {
+  background: #000000;
+
+  transform: scale(1.08);
+}
+
+
+/* =====================================
+   PAGINATION
+===================================== */
+
+.bundle-pagination {
+  width: 100%;
+
+  min-height: 8px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 17px;
+}
+
+
+/* Swiper dots */
+
+.bundle-pagination
+.swiper-pagination-bullet {
+  width: 24px;
+
+  height: 5px;
+
+  margin: 0 !important;
+
+  padding: 0;
+
+  border-radius: 0;
+
+  background: #a0a0a0;
+
+  opacity: 1;
+
+  cursor: pointer;
+
+  transition:
+    all 0.3s ease;
+}
+
+
+/* Active dot */
+
+.bundle-pagination
+.swiper-pagination-bullet-active {
+  width: 24px;
+
+  background: #050505;
+
+  opacity: 1;
+}
+
+
+/* =====================================
+   DESKTOP LARGE SCREEN
+===================================== */
+
+@media (min-width: 1400px) {
+
+  .perfect-bundles {
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+  }
+
+  .bundles-slider-area {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1099px) {
+
+  .perfect-bundles {
+    padding:
+      50px 5% 35px;
+  }
+
+
+  .bundles-header {
+    margin-bottom: 45px;
+  }
+
+
+  .bundles-header h2 {
+    font-size: 50px;
+  }
+
+
+  .bundles-slider-area {
+    padding:
+      0 45px;
+  }
+
+
+  .bundle-card h3 {
+    font-size: 17px;
+  }
+
+
+  .bundle-price strong {
+    font-size: 19px;
+  }
+
+
+  .bundle-price del {
+    font-size: 14px;
+  }
+
+
+  .bundle-cart-btn {
+    height: 43px;
+
+    font-size: 14px;
+  }
+
+
+  .bundle-prev,
+  .bundle-next {
+    width: 44px;
+
+    height: 44px;
+
+    font-size: 23px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 767px) {
+
+  .perfect-bundles {
+    padding:
+      45px 20px 30px;
+  }
+
+
+  .bundles-header {
+    margin-bottom: 35px;
+  }
+
+
+  .bundles-header h2 {
+    font-size: 40px;
+  }
+
+
+  /* Remove side space on mobile */
+
+  .bundles-slider-area {
+    padding: 0;
+  }
+
+
+  /* Hide arrows */
+
+  .bundle-prev,
+  .bundle-next {
+    display: none;
+  }
+
+
+  /* Image */
+
+  .bundle-image-box {
+    margin-bottom: 14px;
+
+    border-radius: 9px;
+  }
+
+
+  /* Product title */
+
+  .bundle-card h3 {
+    font-size: 15px;
+
+    min-height: 40px;
+
+    line-height: 1.35;
+  }
+
+
+  /* Orange line */
+
+  .bundle-orange-line {
+    margin:
+      14px 0;
+  }
+
+
+  /* Price */
+
+  .bundle-price {
+    gap: 6px;
+
+    margin-bottom: 14px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .bundle-price strong {
+    font-size: 17px;
+  }
+
+
+  .bundle-price del {
+    font-size: 12px;
+  }
+
+
+  /* Button */
+
+  .bundle-cart-btn {
+    height: 40px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+  }
+
+
+  /* Pagination */
+
+  .bundle-pagination {
+    margin-top: 20px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 450px) {
+
+  .perfect-bundles {
+    padding:
+      40px 15px 28px;
+  }
+
+
+  .bundles-header {
+    margin-bottom: 30px;
+  }
+
+
+  .bundles-header h2 {
+    font-size: 34px;
+  }
+
+
+  .bundle-card h3 {
+    font-size: 14px;
+  }
+
+
+  .bundle-price strong {
+    font-size: 16px;
+  }
+
+
+  .bundle-cart-btn {
+    height: 38px;
+
+    font-size: 12px;
+  }
+
+
+  .bundle-pagination
+  .swiper-pagination-bullet {
+    width: 20px;
+
+    height: 4px;
+  }
+
+}

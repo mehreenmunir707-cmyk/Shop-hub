@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="600" viewBox="0 0 500 600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff0c9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="500" height="600" fill="url(#bgGlow)"/>
+  
+  <!-- Glow Essentials Title -->
+  <text x="250" y="300" font-family="Arial, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" fill="#d4af37">
+    Glow Essentials
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="250" cy="120" r="60" fill="#f7a600" opacity="0.3"/>
+  <circle cx="80" cy="480" r="50" fill="#d4af37" opacity="0.25"/>
+  <circle cx="420" cy="150" r="40" fill="#f7a600" opacity="0.2"/>
+  <path d="M250 100 L260 150 L250 160 L240 150 Z" fill="#d4af37" opacity="0.3"/>
+</svg>

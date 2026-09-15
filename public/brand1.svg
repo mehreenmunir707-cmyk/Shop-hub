@@ -1,0 +1,16 @@
+<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="250" height="250" fill="#fff5e6"/>
+  
+  <!-- Border -->
+  <rect x="10" y="10" width="230" height="230" fill="none" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- Brand 1: Premium Beauty -->
+  <text x="125" y="80" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#d4af37">✨</text>
+  <text x="125" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Premium</text>
+  <text x="125" y="160" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Beauty</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="8" fill="#d4af37" opacity="0.5"/>
+  <circle cx="200" cy="200" r="8" fill="#d4af37" opacity="0.5"/>
+</svg>

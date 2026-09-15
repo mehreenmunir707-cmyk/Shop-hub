@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="600" viewBox="0 0 500 600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5e6d3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8d4c0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="500" height="600" fill="url(#bgFace)"/>
+  
+  <!-- Face Care Title -->
+  <text x="250" y="300" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#333">
+    Face Care
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="40" fill="#f7a600" opacity="0.3"/>
+  <circle cx="400" cy="150" r="50" fill="#d4af37" opacity="0.2"/>
+  <circle cx="80" cy="500" r="35" fill="#f7a600" opacity="0.25"/>
+</svg>
