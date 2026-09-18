@@ -1,4 +1,5 @@
-const API_URL = "/api/mk-products?limit=200";
+const API_URL =
+  "https://www.mkcosmetics.com.pk/products.json?limit=250";
 
 let productsCache = null;
 let productsPromise = null;
@@ -23,7 +24,7 @@ function normalizeImageUrl(url) {
 
 function getProductImage(product) {
   // Shopify images array
-  if (product.images?.length > 0) {
+  if (Array.isArray(product.images)) {
     const firstImage = product.images[0];
 
     if (typeof firstImage === "string") {
@@ -40,6 +41,10 @@ function getProductImage(product) {
   }
 
   // Shopify main image
+  if (typeof product.image === "string") {
+    return normalizeImageUrl(product.image);
+  }
+
   if (product.image?.src) {
     return normalizeImageUrl(product.image.src);
   }
@@ -64,7 +69,7 @@ function getProductImage(product) {
 // GET ALL PRODUCTS
 // ========================================
 
-export async function getProducts() {
+export async function getProducts(signal) {
   // Return cached products
   if (productsCache) {
     return productsCache;
@@ -75,7 +80,12 @@ export async function getProducts() {
     return productsPromise;
   }
 
-  productsPromise = fetch(API_URL)
+  productsPromise = fetch(API_URL, {
+    signal,
+    headers: {
+      Accept: "application/json",
+    },
+  })
     .then((response) => {
       if (!response.ok) {
         throw new Error(
@@ -87,109 +97,108 @@ export async function getProducts() {
     })
 
     .then((data) => {
-      const products = (data.products || []).map(
-        (product) => {
-          const variant = product.variants?.[0];
+      const rawProducts = Array.isArray(data.products)
+        ? data.products
+        : [];
 
-          // Main product image
-          const mainImage =
-            getProductImage(product);
+      const products = rawProducts.map((product) => {
+        const variant = product.variants?.[0];
 
-          // All product images
-          const allImages =
-            product.images
-              ?.map((image) => {
-                if (typeof image === "string") {
-                  return normalizeImageUrl(image);
-                }
+        const mainImage =
+          getProductImage(product);
 
-                return normalizeImageUrl(
-                  image?.src || image?.url
-                );
-              })
-              .filter(Boolean) || [];
+        const allImages =
+          Array.isArray(product.images)
+            ? product.images
+                .map((image) => {
+                  if (typeof image === "string") {
+                    return normalizeImageUrl(image);
+                  }
 
-          return {
-            id: product.id,
+                  return normalizeImageUrl(
+                    image?.src || image?.url
+                  );
+                })
+                .filter(Boolean)
+            : [];
 
-            title:
-              product.title ||
-              "Unnamed Product",
+        return {
+          id: product.id,
 
-            description:
-              product.body_html ||
-              "No description available.",
+          title:
+            product.title ||
+            "Unnamed Product",
 
-            price:
-              Number(variant?.price) || 0,
+          description:
+            product.body_html ||
+            "No description available.",
 
-            oldPrice:
-              Number(
-                variant?.compare_at_price
-              ) || 0,
+          price:
+            Number(variant?.price) || 0,
 
-            image: mainImage,
+          oldPrice:
+            Number(variant?.compare_at_price) || 0,
 
-            images:
-              allImages.length > 0
-                ? allImages
-                : mainImage
-                ? [mainImage]
-                : [],
+          image: mainImage,
 
-            category:
-              product.product_type ||
-              product.tags?.[0] ||
-              "Other",
+          images:
+            allImages.length > 0
+              ? allImages
+              : mainImage
+              ? [mainImage]
+              : [],
 
-            brand:
-              "MK Cosmetics",
+          category:
+            product.product_type ||
+            product.tags?.[0] ||
+            "Other",
 
-            tags:
-              product.tags || [],
+          brand:
+            product.vendor ||
+            "MK Cosmetics",
 
-            handle:
-              product.handle || "",
+          tags:
+            Array.isArray(product.tags)
+              ? product.tags
+              : [],
 
-            variants:
-              product.variants || [],
+          handle:
+            product.handle || "",
 
-            available:
-              product.variants?.some(
-                (variant) =>
-                  variant.available
-              ) || false,
+          variants:
+            product.variants || [],
 
-            stock:
-              product.variants?.reduce(
-                (total, variant) =>
-                  total +
-                  (Number(
-                    variant.inventory_quantity
-                  ) || 0),
-                0
-              ) || 0,
-          };
-        }
-      );
+          available:
+            product.variants?.some(
+              (variant) =>
+                variant.available
+            ) || false,
+
+          stock:
+            product.variants?.reduce(
+              (total, variant) =>
+                total +
+                (Number(
+                  variant.inventory_quantity
+                ) || 0),
+              0
+            ) || 0,
+        };
+      });
 
       // ========================================
-      // SORT PRODUCTS
       // PRODUCTS WITH IMAGES FIRST
-      // PRODUCTS WITHOUT IMAGES LAST
       // ========================================
 
       const sortedProducts = [
         ...products.filter(
           (product) => product.image
         ),
-
         ...products.filter(
           (product) => !product.image
         ),
       ];
 
-      // Save sorted products in cache
       productsCache = sortedProducts;
 
       // ========================================
@@ -237,9 +246,12 @@ export async function getProducts() {
 // GET SINGLE PRODUCT
 // ========================================
 
-export async function getProductById(id) {
+export async function getProductById(
+  id,
+  signal
+) {
   const products =
-    await getProducts();
+    await getProducts(signal);
 
   return products.find(
     (product) =>
